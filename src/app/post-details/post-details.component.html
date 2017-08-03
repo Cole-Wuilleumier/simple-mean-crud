@@ -1,0 +1,39 @@
+<!--Before edit variable tured on-->
+<div class="container" *ngIf="!(edit)">
+    <header> 
+        <h3>{{ post?.title }}</h3>
+        <b> {{ post?.subject }} </b> 
+        posted on <b>{{ post?.created_at | date }} </b>
+    </header>    
+    <section>
+        <p>{{ post?.content }}</p>
+        <button (click)="deletePost(post)">Delete Post</button>
+        <button (click)="editView(post)">Edit Post</button>
+    </section>
+</div>
+
+<!--Edit variable on-->
+<div class="container" *ngIf="edit">
+    <form [formGroup]="postForm" (ngSubmit)="postForm.valid && updatePost()">
+            <label>Edit post title:</label><br>
+            <input type="text" class="form-control" formControlName="title" autocomplete="false">
+            
+            <label>Subject:</label>
+                <select class="form-control" formControlName="subject">
+                    <option value="node">NodeJS</option>
+                    <option value="express">ExpressJS</option>
+                    <option value="angular">Angular</option>
+                    <option value="mongo">MongoDB</option>
+                </select>
+            <label for="comment">Content:</label>
+            <textarea class="form-control" formControlName="content" rows="8"></textarea>
+            <div class="alert alert-success" *ngIf="status && sent">{{ message }} </div>
+            <div class="alert alert-danger" *ngIf="!(status) && sent">{{ message }} </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" [disabled]="!postForm.valid">Submit</button>
+            </div>
+            <a *ngIf="status && sent" class="btn btn-primary" href="/" >Back to Dashboard</a>
+            <button class="btn btn-primary" (click)="cancel()">Cancel</button>
+    </form>     
+</div>
