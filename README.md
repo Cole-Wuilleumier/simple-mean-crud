@@ -17,10 +17,13 @@ Feel free to contact me via email or github if you have any trouble getting this
       'database': 'mongodb://<path-to-your-mongodb>'
     };`
     
-## Then from the command line enter your application folder and start the app:
+## Then from the command line enter your application folder, npm install, and start the app:
 
-  `$ cd simple-mean-crud
-   $ node server `
+  `$ cd simple-mean-crud`
+  
+  `$ npm install`
+  
+  `$ ng build && node server `
   
 ## Enjoy!
 
