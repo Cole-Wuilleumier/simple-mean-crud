@@ -1,28 +1,26 @@
-# AngularPostCrud
+# Simple MEAN CRUD
+This application can be used as a template for your simple MEAN stack CRUD app. It was built using Node, ExpressJS, Angular2 and MongoDB. It is a very simple CRUD app that lets a user make create `posts`, edit `posts` and delete `posts` on a MongoDB database using Mongoose Schemas. This app is ideal from begginners learning to make CRUD apps using the MEAN stack.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
+Feel free to contact me via email or github if you have any trouble getting this app to run on your machine. Let me know if you have any suggestions as to how we can improve this app.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Getting started with the Simple-MEAN-CRUD
 
-## Code scaffolding
+## Clone the repository from the command line:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+  `$ git clone http://github.com/cole-wuilleumier/simple-mean-crud`
+  
+## Drag and drop the repository into a code editor and change the `config.js` file to include your MongoDB in the following structure:
+   
+   `module.exports = {
+      'secret': '',
+      'database': 'mongodb://<path-to-your-mongodb>'
+    };`
+    
+## Then from the command line enter your application folder and start the app:
 
-## Build
+  `$ cd simple-mean-crud
+   $ node server `
+  
+## Enjoy!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
